@@ -1,0 +1,40 @@
+# Project: Supercalc
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o algefunc.o physfunc.o geomfunc.o screenclr.o
+LINKOBJ  = main.o algefunc.o physfunc.o geomfunc.o screenclr.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Supercalc.exe
+CXXFLAGS = $(CXXINCS) -march=native -Os -std=gnu++11
+CFLAGS   = $(INCS) -march=native -Os -std=gnu++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+algefunc.o: algefunc.cpp
+	$(CPP) -c algefunc.cpp -o algefunc.o $(CXXFLAGS)
+
+physfunc.o: physfunc.cpp
+	$(CPP) -c physfunc.cpp -o physfunc.o $(CXXFLAGS)
+
+geomfunc.o: geomfunc.cpp
+	$(CPP) -c geomfunc.cpp -o geomfunc.o $(CXXFLAGS)
+
+screenclr.o: screenclr.cpp
+	$(CPP) -c screenclr.cpp -o screenclr.o $(CXXFLAGS)
