@@ -1,5 +1,5 @@
 #ifndef GEOMFUNC_H_DEFINED
-#define GOEMFUNC_H_DEFINED
+#define GEOMFUNC_H_DEFINED
 
 double gf_PtDist(double coordX1, double coordY1, double coordX2, double coordY2);
 
