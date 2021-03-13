@@ -19,6 +19,10 @@ int errNum;
 void mainCont(){
 	cout << "\nAnother opperation? [1 for \"Yes\"/0 for \"No\"] ->";
 	cin >> forChk;
+	if(forChk != 1 or forChk != 0){
+		errNum = 6;
+		forChk = 0;
+	}
 }
 
 string errOut(){
@@ -32,6 +36,8 @@ string errOut(){
 		return "Physics Opperations Menu.";
 	} else if(errNum == 5){
 		return "Geometry Opperations Menu.";
+	} else if(errNum == 6){
+		return "Continue Menu.";
 	} else {
 		return "Somewhere. (Please tell me how you got this error, and I'll see if I can fix it.)";
 	}
@@ -636,11 +642,13 @@ int main(int argc, char** argv) {
 			}
 		}
 		if(errNum != 0){
+			ClearScreen();
 			cout << "Error in " << errOut() << "\n";
 			cout << "Aborting...";
 			return errNum;
 		}
 		if(forChk != 1){
+			ClearScreen();
 			break;
 		}
 	}
