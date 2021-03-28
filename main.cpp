@@ -291,6 +291,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(3):{
+						ClearScreen();
 						cout << "Mass of object? ->";
 						cin >> input1;
 						cout << "Height of object from ground? ->";
@@ -300,6 +301,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(4):{
+						ClearScreen();
 						cout << "Mass of object? ->";
 						cin >> input1;
 						cout << "Velocity of object? ->";
@@ -309,6 +311,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(5):{
+						ClearScreen();
 						cout << "Kinetic Energy of object? ->";
 						cin >> input1;
 						cout << "Mass of object? ->";
@@ -318,6 +321,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(6):{
+						ClearScreen();
 						cout << "Force exerted on object? ->";
 						cin >> input1;
 						cout << "Distance of application of force? ->";
@@ -327,6 +331,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(7):{
+						ClearScreen();
 						cout << "Fahrenheit? ->";
 						cin >> input1;
 						cout << "Celsius: " << pf_FahrenCel(input1);
@@ -334,6 +339,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(8):{
+						ClearScreen();
 						cout << "Celsius? ->";
 						cin >> input1;
 						cout << "Kelvin: " << pf_CelKel(input1);
@@ -341,6 +347,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(9):{
+						ClearScreen();
 						cout << "Kelvin? ->";
 						cin >> input1;
 						cout << "Celsius: " << pf_KelCel(input1);
@@ -348,6 +355,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(10):{
+						ClearScreen();
 						cout << "Celsius? ->";
 						cin >> input1;
 						cout << "Fahrenheit: " << pf_CelFahren(input1);
@@ -355,6 +363,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(11):{
+						ClearScreen();
 						cout << "Frequency of wave? ->";
 						cin >> input1;
 						cout << "Velocity of wave? ->";
@@ -364,6 +373,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(12):{
+						ClearScreen();
 						cout << "Wavelength? ->";
 						cin >> input1;
 						cout << "Wave Velocity? ->";
@@ -373,6 +383,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(13):{
+						ClearScreen();
 						cout << "Frequency of Wave? ->";
 						cin >> input1;
 						cout << "Period of Wave: " << pf_WavPeri(input1);
@@ -380,6 +391,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(14):{
+						ClearScreen();
 						cout << "Wavelength? ->";
 						cin >> input1;
 						cout << "Wave Frequency? ->";
@@ -389,6 +401,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(15):{
+						ClearScreen();
 						cout << "Current in circut? ->";
 						cin >> input1;
 						cout << "Resistance in circut? ->";
@@ -398,6 +411,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(16):{
+						ClearScreen();
 						cout << "Voltage in circut? ->";
 						cin >> input1;
 						cout << "Resistance in circut? ->";
@@ -407,6 +421,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(17):{
+						ClearScreen();
 						cout << "Voltage in circut? ->";
 						cin >> input1;
 						cout << "Current in circut? ->";
@@ -416,6 +431,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(18):{
+						ClearScreen();
 						cout << "Voltage in circut? ->";
 						cin >> input1;
 						cout << "Current in circut? ->";
@@ -425,6 +441,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(19):{
+						ClearScreen();
 						cout << "Mass of solute? ->";
 						cin >> input1;
 						cout << "Volume of solvent? ->";
@@ -434,6 +451,7 @@ int main(int argc, char** argv) {
 						break;
 					}
 					case(20):{
+						ClearScreen();
 						cout << "Mass of object? ->";
 						cin >> input1;
 						cout << "Volume of pbject? ->";
@@ -643,8 +661,8 @@ int main(int argc, char** argv) {
 		}
 		if(errNum != 0){
 			ClearScreen();
-			cout << "Error in " << errOut() << "\n";
-			cout << "Aborting...";
+			cerr << "Error in " << errOut() << "\n";
+			cerr << "Aborting...";
 			return errNum;
 		}
 		if(forChk != 1){
